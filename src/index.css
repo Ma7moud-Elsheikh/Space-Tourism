@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+    --font-bellefair: 'Bellefair', serif;
+    --font-barlow: 'Barlow', sans-serif;
+    --font-barlow-cond: 'Barlow Condensed', sans-serif;
+
+    --spacing-25: 2px;
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-1000: 80px;
+    --spacing-1200: 96px;
+    --spacing-1600: 128px;
+
+    --color-space-blue-300: #d0d6f9;
+    --color-space-blue-900: #0b0d17;
+}
+
+@utility text-preset-1 {
+    @apply font-bellefair text-[80px] leading-[1.2] md:text-[100px] lg:text-[144px] tracking-normal;
+}
+
+@utility text-preset-2 {
+    @apply font-bellefair text-[56px] leading-[1.2] md:text-[60px] lg:text-[100px] tracking-normal;
+}
+
+@utility text-preset-3 {
+    @apply font-bellefair text-[32px] leading-[1.2] md:text-[35px] lg:text-[56px] tracking-normal;
+}
+
+@utility text-preset-4 {
+    @apply font-bellefair text-[20px] leading-[1.2] md:text-[20px] lg:text-[32px] tracking-normal;
+}
+
+@utility text-preset-5 {
+    @apply font-barlow-cond text-[16px] leading-[1.2] tracking-[2px] md:text-[18px] md:tracking-[3px] lg:text-[28px] lg:tracking-[4px];
+}
+
+@utility text-preset-6 {
+    @apply font-bellefair text-[20px] leading-[1.2] md:text-[20px] lg:text-[28px] tracking-normal;
+}
+
+@utility text-preset-7 {
+    @apply font-barlow-cond text-[12px] leading-[1.2] tracking-[1px] md:text-[13px] lg:text-[14px] lg:tracking-[2px];
+}
+
+@utility text-preset-8 {
+    @apply font-barlow-cond text-[14px] leading-[1.2] tracking-[1px] md:text-[13px] lg:text-[16px] lg:tracking-[2px];
+}
+
+@utility text-preset-9 {
+    @apply font-barlow text-[14px] leading-[1.8] md:text-[13px] tracking-normal;
+}
+
+body {
+    background: var(--color-space-blue-900);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    .navList a {
+        border-bottom: none !important;
+        border-right: 4px solid transparent;
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .navList a.border-white {
+        border-bottom: none !important;
+        border-right-color: white !important;
+    }
+    .navList a:hover {
+        border-bottom: none !important;
+        border-right-color: rgba(255, 255, 255, 0.5) !important;
+    }
+}
+.container {
+    @media (width >= 96rem) {
+        max-width: 85rem;
+    }
+}
+
+.p-img img {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 77%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        black 77%,
+        transparent 100%
+    );
+}
